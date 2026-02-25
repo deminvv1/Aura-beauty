@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
@@ -12,6 +12,16 @@ export default function Hero() {
   const [index, setIndex] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const ctaMag = useMagnetic(0.2);
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Autoplay prevented:", error);
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -91,4 +101,3 @@ export default function Hero() {
     </header>
   );
 }
-
