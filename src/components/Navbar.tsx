@@ -321,7 +321,7 @@ export default function Navbar() {
                 textDecoration: 'none',
               }}
             >
-              Прайс-лист
+              Наши работы
             </a>
             <a
               href="#about"
@@ -336,6 +336,34 @@ export default function Navbar() {
               }}
             >
               О нас
+            </a>
+            <a
+              href="#contacts"
+              onClick={() => setIsMenuOpen(false)}
+              style={{
+                fontFamily: '"Bodoni Moda", serif',
+                fontSize: 16,
+                letterSpacing: 4,
+                textTransform: 'uppercase',
+                color: '#ffffff',
+                textDecoration: 'none',
+              }}
+            >
+              Контакты
+            </a>
+            <a
+              href="#reviews"
+              onClick={() => setIsMenuOpen(false)}
+              style={{
+                fontFamily: '"Bodoni Moda", serif',
+                fontSize: 16,
+                letterSpacing: 4,
+                textTransform: 'uppercase',
+                color: '#ffffff',
+                textDecoration: 'none',
+              }}
+            >
+              Отзывы
             </a>
 
             <a
