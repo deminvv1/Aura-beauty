@@ -13,7 +13,7 @@ export default function Hero() {
   const [opacity, setOpacity] = useState(1);
   const ctaMag = useMagnetic(0.2);
 
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
