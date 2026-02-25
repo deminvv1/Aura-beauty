@@ -17,9 +17,16 @@ export default function Hero() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch((error) => {
-        console.log("Autoplay prevented:", error);
-      });
+      // Попытка запустить видео программно
+      const playPromise = videoRef.current.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Если автоплей заблокирован (энергосбережение),
+          // видео запустится при первом клике пользователя по экрану
+          console.log("iPhone autoplay blocked");
+        });
+      }
     }
   }, []);
 
@@ -39,16 +46,16 @@ export default function Hero() {
     <header className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0 bg-black">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          poster="/big.jpg" // Заглушка, пока видео грузится
+          poster="/big.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/bg-video1.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает видео.
+          <source src="/bg-video1.mp4#t=0.1" type="video/mp4" />
         </video>
         {/* <Image
           src="/big.jpg"
