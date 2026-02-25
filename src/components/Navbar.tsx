@@ -310,7 +310,7 @@ export default function Navbar() {
               Услуги
             </a>
             <a
-              href="#prices"
+              href="#portfolio"
               onClick={() => setIsMenuOpen(false)}
               style={{
                 fontFamily: '"Bodoni Moda", serif',
