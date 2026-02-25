@@ -94,7 +94,7 @@ export default function Hero() {
             }
             onMouseLeave={ctaMag2.onMouseLeave}
             href="https://www.yclients.com"
-            className="bg-primary text-white px-10 py-4 rounded-full text-base font-bold tracking-widest uppercase shadow-2xl shadow-primary/40 hover:bg-primary/90 transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1)"
+            className="bg-primary text-white px-10 py-4 rounded-full text-base font-bold tracking-widest uppercase shadow-2xl shadow-primary/40 hover:bg-primary/90 transition-colors duration-300 flex items-center justify-center text-center min-w-[200px]"
           >
             Записаться
           </Link>
