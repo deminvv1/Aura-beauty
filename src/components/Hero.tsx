@@ -39,13 +39,15 @@ export default function Hero() {
     <header className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <video
+          className="absolute inset-0 w-full h-full object-cover transform-gpu scale-[1.01]"
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
           poster="/big.jpg" // Заглушка, пока видео грузится
-          className="absolute inset-0 w-full h-full object-cover"
+          // className="absolute inset-0 w-full h-full object-cover"
+          style={{ willChange: "transform" }}
         >
           <source src="/bg-video1.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
