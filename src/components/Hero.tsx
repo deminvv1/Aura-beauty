@@ -33,6 +33,7 @@ export default function Hero() {
           loop
           muted
           playsInline
+          webkit-playsinline
           poster="/big.jpg" // Заглушка, пока видео грузится
           className="absolute inset-0 w-full h-full object-cover"
         >
