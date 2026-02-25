@@ -1,5 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from 'swiper';
+import { Autoplay, FreeMode } from "swiper/modules";
+
+// Не забудьте импортировать стили
+import "swiper/css";
+import "swiper/css/free-mode";
 
 const portfolioImages = [
   {
@@ -22,12 +31,29 @@ const portfolioImages = [
     src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
     alt: "Portfolio work 5",
   },
+  {
+    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    alt: "Portfolio work 6",
+  },
+  {
+    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    alt: "Portfolio work 7",
+  },
+  {
+    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    alt: "Portfolio work 8",
+  },
+  {
+    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    alt: "Portfolio work 9",
+  },
+  {
+    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    alt: "Portfolio work 10",
+  },
 ];
 
 export default function Portfolio() {
-  // Duplicate for seamless loop
-  const allImages = [...portfolioImages, ...portfolioImages];
-
   return (
     <section
       className="py-24 bg-background-light dark:bg-background-dark overflow-hidden"
@@ -40,33 +66,50 @@ export default function Portfolio() {
             наши работы
             <span className="h-px w-10 bg-primary/40" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-black mb-2">Портфолио студии</h2>
-          <p className="text-slate-500 font-light max-w-xl mx-auto">
-            Живые примеры того, как тонко мы подчеркиваем индивидуальность каждой клиентки.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-black mb-2">
+            Портфолио студии
+          </h2>
         </div>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.1}>
-        <div className="relative w-full overflow-hidden py-10">
-          <div className="flex w-max animate-scroll flex-nowrap">
-            {allImages.map((img, i) => (
-              <div
-                key={i}
-                className="w-[280px] md:w-[350px] aspect-[9/16] shrink-0 overflow-hidden rounded-2xl shadow-xl mx-3"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={350}
-                  height={622}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        <div className="w-full cursor-grab active:cursor-grabbing">
+          <Swiper
+            modules={[Autoplay, FreeMode]}
+            slidesPerView={"auto"}
+            spaceBetween={24}
+            loop={true}
+            speed={7000}
+            freeMode={true}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            wrapperClass="flex transition-timing-linear"
+            className="portfolio-swiper"
+          >
+            {portfolioImages.map((img, i) => (
+              <SwiperSlide key={i} className="!w-[280px] md:!w-[350px]">
+                <div className="aspect-[9/16] overflow-hidden rounded-2xl shadow-xl transition-transform duration-500 hover:scale-[1.02]">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={350}
+                    height={622}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </ScrollReveal>
+      
+      <style jsx global>{`
+        .transition-timing-linear {
+          transition-timing-function: linear !important;
+        }
+      `}</style>
     </section>
   );
 }

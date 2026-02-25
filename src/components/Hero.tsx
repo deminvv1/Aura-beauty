@@ -16,30 +16,16 @@ export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-  const video = videoRef.current;
-  if (!video) return;
+    if (videoRef.current) {
+      const playPromise = videoRef.current.play();
 
-  // Функция запуска
-  const attemptPlay = () => {
-    video.play().catch(() => {
-      // Если всё еще блок — пробуем запустить при любом тапе по экрану
-      window.addEventListener('touchstart', () => video.play(), { once: true });
-    });
-  };
-
-  // Следим за появлением видео в поле зрения
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        attemptPlay();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          console.log("iPhone autoplay blocked");
+        });
       }
-    });
-  }, { threshold: 0.1 }); // Сработает, когда 10% видео будет в кадре
-
-  observer.observe(video);
-
-  return () => observer.disconnect();
-}, []);
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
