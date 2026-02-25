@@ -3,7 +3,6 @@
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperType } from 'swiper';
 import { Autoplay, FreeMode } from "swiper/modules";
 
 // Не забудьте импортировать стили
@@ -104,7 +103,7 @@ export default function Portfolio() {
           </Swiper>
         </div>
       </ScrollReveal>
-      
+
       <style jsx global>{`
         .transition-timing-linear {
           transition-timing-function: linear !important;
