@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+body {
+  font-family: "Public Sans", sans-serif;
+  min-height: max(884px, 100dvh);
+}
+
+.glass-nav {
+  background: rgba(248, 246, 246, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.dark .glass-nav {
+  background: rgba(34, 22, 16, 0.8);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(34, 22, 16, 0.2),
+    rgba(34, 22, 16, 0.7)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-cta-btn {
+  position: relative;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-cta-btn:hover {
+  background-color: #000000;
+  color: #000000;
+}
+.nav-cta-btn:hover span{
+  
+  color: #000000;
+}
+
+.nav-link {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.08); 
+  color: #f0e6d8 !important; 
+}
+
+
+
