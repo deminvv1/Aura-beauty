@@ -31,15 +31,15 @@ const portfolioImages = [
     alt: "Portfolio work 5",
   },
   {
-    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMlDxXejR7mL8TAq26VDukvo3FoBN4Qd5LKA&s",
     alt: "Portfolio work 6",
   },
   {
-    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSP8A7odriTgChwJXfM8gJ99jrklTFT0TqVQ&s",
     alt: "Portfolio work 7",
   },
   {
-    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    src: "https://optim.tildacdn.com/tild6531-3137-4434-a630-643232326436/-/resize/824x/-/format/webp/__.jpg.webp",
     alt: "Portfolio work 8",
   },
   {
@@ -47,7 +47,7 @@ const portfolioImages = [
     alt: "Portfolio work 9",
   },
   {
-    src: "https://i.pinimg.com/736x/83/1a/e0/831ae0d5bf65afc0dcbc594d183e034f.jpg",
+    src: "https://i.pinimg.com/originals/0b/37/ac/0b37ac1a0e67d6f5805d8066dc4e9350.jpg",
     alt: "Portfolio work 10",
   },
 ];
