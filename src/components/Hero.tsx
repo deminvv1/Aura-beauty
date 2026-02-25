@@ -45,7 +45,7 @@ export default function Hero() {
           muted
           playsInline
           preload="auto"
-          poster="/big.jpg" // Заглушка, пока видео грузится
+          // poster="/big.jpg" // Заглушка, пока видео грузится
           // className="absolute inset-0 w-full h-full object-cover"
           style={{ willChange: "transform" }}
         >
