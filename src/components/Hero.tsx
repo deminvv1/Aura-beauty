@@ -39,13 +39,14 @@ export default function Hero() {
     <header className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <video
-          className="absolute inset-0 w-full h-full object-cover transform-gpu scale-[1.01]"
+          className="absolute inset-0 w-full h-full object-cover transform-gpu scale-[1.01] opacity-0 transition-opacity duration-500"
+          onCanPlay={(e) => e.currentTarget.classList.remove('opacity-0')}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          // poster="/big.jpg" // Заглушка, пока видео грузится
+          poster="/big.jpg" // Заглушка, пока видео грузится
           // className="absolute inset-0 w-full h-full object-cover"
           style={{ backgroundColor: 'transparent' }}
           ref={videoRef}
