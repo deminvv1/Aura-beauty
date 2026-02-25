@@ -47,7 +47,8 @@ export default function Hero() {
           preload="auto"
           // poster="/big.jpg" // Заглушка, пока видео грузится
           // className="absolute inset-0 w-full h-full object-cover"
-          style={{ willChange: "transform" }}
+          style={{ backgroundColor: 'transparent' }}
+          ref={videoRef}
         >
           <source src="/bg-video1.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео.
