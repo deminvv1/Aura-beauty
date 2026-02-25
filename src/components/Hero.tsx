@@ -11,7 +11,8 @@ const words = ["естественная", "неповторимая", "сияю
 export default function Hero() {
   const [index, setIndex] = useState(0);
   const [opacity, setOpacity] = useState(1);
-  const ctaMag = useMagnetic(0.2);
+  const ctaMag1 = useMagnetic(0.2);
+  const ctaMag2 = useMagnetic(0.2);
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -87,10 +88,24 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            ref={ctaMag.ref as React.RefObject<HTMLAnchorElement>}
+            ref={ctaMag2.ref as React.RefObject<HTMLAnchorElement>}
             onMouseMove={
-              ctaMag.onMouseMove as unknown as React.MouseEventHandler<HTMLAnchorElement>
+              ctaMag2.onMouseMove as unknown as React.MouseEventHandler<HTMLAnchorElement>
             }
+            onMouseLeave={ctaMag2.onMouseLeave}
+            href="https://www.yclients.com"
+            className="bg-primary text-white px-10 py-4 rounded-full text-base font-bold tracking-widest uppercase shadow-2xl shadow-primary/40 hover:bg-primary/90 transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1)"
+          >
+            Записаться
+          </Link>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <Link
+            ref={ctaMag1.ref as React.RefObject<HTMLAnchorElement>}
+            onMouseMove={
+              ctaMag1.onMouseMove as unknown as React.MouseEventHandler<HTMLAnchorElement>
+            }
+            onMouseLeave={ctaMag1.onMouseLeave}
             href="#services"
             className="bg-primary text-white px-10 py-4 rounded-full text-base font-bold tracking-widest uppercase shadow-2xl shadow-primary/40 hover:bg-primary/90 transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1)"
           >
