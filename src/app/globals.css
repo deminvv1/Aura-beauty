@@ -1,14 +1,20 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Public Sans", sans-serif;
   min-height: max(884px, 100dvh);
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .glass-nav {
@@ -30,6 +36,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .nav-cta-btn {
@@ -42,20 +51,18 @@ html {
   background-color: #000000;
   color: #000000;
 }
-.nav-cta-btn:hover span{
-  
+.nav-cta-btn:hover span {
   color: #000000;
 }
 
 .nav-link {
   display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease;
 }
 
 .nav-link:hover {
-  transform: scale(1.08); 
-  color: #f0e6d8 !important; 
+  transform: scale(1.08);
+  color: #f0e6d8 !important;
 }
-
-
-
