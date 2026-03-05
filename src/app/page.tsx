@@ -7,6 +7,7 @@ import Portfolio from "@/components/Portfolio";
 import Contacts from "@/components/Contacts";
 import Footer from "@/components/Footer";
 import Reviews from "@/components/Reviews";
+import Circle from "@/components/Circle";
 // import FloatingButton from "@/components/FloatingButton";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Portfolio />
       <Contacts />
       <Reviews />
+      <Circle />
       <Footer />
       {/* <FloatingButton /> */}
     </>
