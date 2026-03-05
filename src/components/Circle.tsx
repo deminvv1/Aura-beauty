@@ -10,7 +10,7 @@ export default function PromoPopup() {
       if (!sessionStorage.getItem('promoShown')) {
         setIsVisible(true);
       }
-    }, 2000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 

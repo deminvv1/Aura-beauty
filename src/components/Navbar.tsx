@@ -99,7 +99,7 @@ export default function Navbar() {
           transition: 'background .6s, border-color .6s, backdrop-filter .6s',
         }}
       >
-        <div style={{ flex: '0 0 auto' }}>
+        <div style={{ flex: '0 0 auto', paddingLeft: '32px' }}>
           <a
             href="#"
             style={{
@@ -128,8 +128,8 @@ export default function Navbar() {
             href="#services"
             style={{
               fontFamily: '"Bodoni Moda", serif',
-              fontSize: 12,
-              letterSpacing: 4,
+              fontSize: 15,
+              letterSpacing: 5,
               textTransform: 'uppercase',
               color: navColor,
               textDecoration: 'none',
@@ -143,8 +143,8 @@ export default function Navbar() {
             href="#portfolio"
             style={{
               fontFamily: '"Bodoni Moda", serif',
-              fontSize: 12,
-              letterSpacing: 4,
+              fontSize: 15,
+              letterSpacing: 5,
               textTransform: 'uppercase',
               color: navColor,
               textDecoration: 'none',
@@ -158,8 +158,8 @@ export default function Navbar() {
             href="#about"
             style={{
               fontFamily: '"Bodoni Moda", serif',
-              fontSize: 12,
-              letterSpacing: 4,
+              fontSize: 15,
+              letterSpacing: 5,
               textTransform: 'uppercase',
               color: navColor,
               textDecoration: 'none',
@@ -173,8 +173,8 @@ export default function Navbar() {
             href="#contacts"
             style={{
               fontFamily: '"Bodoni Moda", serif',
-              fontSize: 12,
-              letterSpacing: 4,
+              fontSize: 15,
+              letterSpacing: 5,
               textTransform: 'uppercase',
               color: navColor,
               textDecoration: 'none',
@@ -188,8 +188,8 @@ export default function Navbar() {
             href="#reviews"
             style={{
               fontFamily: '"Bodoni Moda", serif',
-              fontSize: 12,
-              letterSpacing: 4,
+              fontSize: 15,
+              letterSpacing: 5,
               textTransform: 'uppercase',
               color: navColor,
               textDecoration: 'none',
