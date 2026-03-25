@@ -4,8 +4,6 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode } from "swiper/modules";
-
-// Не забудьте импортировать стили
 import "swiper/css";
 import "swiper/css/free-mode";
 

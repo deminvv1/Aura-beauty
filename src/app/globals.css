@@ -66,3 +66,17 @@ html {
   transform: scale(1.08);
   color: #f0e6d8 !important;
 }
+
+.menu-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
