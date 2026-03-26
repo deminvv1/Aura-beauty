@@ -69,7 +69,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
               </div>
 
               <footer className="pt-6 border-t border-white/5 text-[9px] text-slate-600 uppercase tracking-widest text-center">
-                © 2026 Aura Details — Эстетика безопасности
+                © 2026 Aura Cookie — Эстетика безопасности
               </footer>
             </div>
           </motion.div>

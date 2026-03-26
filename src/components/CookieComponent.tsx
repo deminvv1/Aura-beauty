@@ -126,7 +126,7 @@ const CookieComponent = ({ onOpenPrivacy }: CookieProps) => {
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 blur-[80px] pointer-events-none" />
 
               <h4 className="text-white text-xl font-bold tracking-tight mb-4">
-                Aura Details
+                Aura Cookie
               </h4>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 В Aura мы верим: идеальный сервис — как свежее печенье,
