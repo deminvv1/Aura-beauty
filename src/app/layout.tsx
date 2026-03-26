@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientWrapper from "@/components/Client";
 import PremiumNailCursor from "@/components/CustomCursor";
-import Manager from "@/components/Manager";
 
 
 export const metadata: Metadata = {

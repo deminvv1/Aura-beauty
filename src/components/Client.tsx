@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import LoadingScreen from "@/components/Loading";
-import Navbar from "@/components/Navbar";
 
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);

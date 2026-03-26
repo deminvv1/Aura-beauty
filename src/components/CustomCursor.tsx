@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const PremiumNailCursor = () => {
+const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const PremiumNailCursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[9999] bg-contain bg-no-center transition-opacity duration-300"
+      className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[9999] bg-contain bg-no-center transition-opacity duration-300 hidden md:block"
       style={{
         backgroundImage: 'url(/cursor.svg)',
         willChange: 'transform',
@@ -60,4 +60,4 @@ const PremiumNailCursor = () => {
   );
 };
 
-export default PremiumNailCursor;
+export default CustomCursor;

@@ -1,6 +1,4 @@
 'use client'
-import Image from "next/image";
-import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 import { SERVICES } from "@/data/content";
 import { useEffect, useRef, useState } from "react";
@@ -33,7 +31,6 @@ function Panel({ panel }: { panel: ServicePanel }) {
         position: 'relative',
       }}
     >
-      {/* Left */}
       <div style={{
         padding: '80px 56px',
         display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
@@ -90,13 +87,12 @@ function Panel({ panel }: { panel: ServicePanel }) {
         </div>
       </div>
 
-      {/* Right */}
       <div style={{
         padding: '80px 56px',
         display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
         position: 'relative', overflow: 'hidden',
       }}>
-        {/* Diagonal pattern */}
+
         <div style={{
           position: 'absolute', inset: 0,
           background: `repeating-linear-gradient(-45deg,
@@ -202,7 +198,6 @@ export default function Services() {
       trigger: pinAreaRef.current,
       pin: stickyRef.current,
       start: 'top top',
-      // Конец скролла должен совпадать с физической высотой минус один экран
       end: () => `+=${scrollDistance}`,
       scrub: 1,
       invalidateOnRefresh: true,
@@ -379,7 +374,6 @@ export default function Services() {
 
   return (
     <div id="services" style={{ position: 'relative', zIndex: 2, background: 'var(--bg2)' }}>
-      {/* Header */}
       <div style={{
         padding: '80px 56px 48px',
         borderTop: '1px solid var(--border)',
@@ -403,7 +397,6 @@ export default function Services() {
         </h2>
       </div>
 
-      {/* Pin area */}
       <div ref={pinAreaRef}>
         <div
           ref={stickyRef}

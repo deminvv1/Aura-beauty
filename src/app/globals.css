@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
-
 }
 
 @media (min-width: 768px) {
@@ -96,8 +95,8 @@ html {
 
 @keyframes cookie-journey {
   0% {
-    top: -80px; /* За пределами экрана сверху */
-    left: -80px; /* За пределами экрана слева */
+    top: -80px;
+    left: -80px;
     transform: rotate(0deg);
   }
   30% {
@@ -107,22 +106,21 @@ html {
   }
   60% {
     top: 50vh;
-    left: 80vw; /* Улетает вправо */
+    left: 80vw;
     transform: rotate(-15deg);
   }
   100% {
     top: 80vh;
-    left: 10vw; /* Возвращается влево вниз */
+    left: 10vw; 
     transform: rotate(10deg);
   }
 }
 
 .animate-cookie-journey {
-  /* Медленный, плавный пролет за 10 секунд */
+
   animation: cookie-journey 7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Мягкое парение самой иконки внутри контейнера */
 @keyframes bounce-slow {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
