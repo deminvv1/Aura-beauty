@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientWrapper from "@/components/Client";
+import PremiumNailCursor from "@/components/CustomCursor";
+import Manager from "@/components/Manager";
+
 
 export const metadata: Metadata = {
   title: "AURA Beauty Studio | Ваша естественная красота",
@@ -27,6 +30,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30">
         <ClientWrapper>
+          <PremiumNailCursor />
           <main>{children}</main>
         </ClientWrapper>
       </body>

@@ -23,3 +23,7 @@ export interface PriceItem {
 export interface Window {
   ymaps: any;
 }
+
+export interface CookieProps {
+  onOpenPrivacy: () => void;
+}

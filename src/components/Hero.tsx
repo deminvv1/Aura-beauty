@@ -55,13 +55,6 @@ export default function Hero() {
         >
           <source src="/bg-video1.mp4#t=0.1" type="video/mp4" />
         </video>
-        {/* <Image
-          src="/big.jpg"
-          alt="hero"
-          fill
-          className="object-cover"
-          priority
-        /> */}
         <div className="absolute inset-0 hero-gradient" />
       </div>
 

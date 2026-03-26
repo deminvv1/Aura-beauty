@@ -10,7 +10,7 @@ export default function PromoPopup() {
       if (!sessionStorage.getItem('promoShown')) {
         setIsVisible(true);
       }
-    }, 10000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -18,7 +18,6 @@ export default function PromoPopup() {
 
   return (
     <>
-    {/* Акция */ }
       <div 
         className={`fixed right-6 z-50 transition-all duration-700 ease-out bottom-[112px]
           ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-10 scale-95 pointer-events-none'}
@@ -53,7 +52,6 @@ export default function PromoPopup() {
         </div>
       </div>
 
-      {/* Основная кнопка */}
       <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40 flex items-center justify-center">
         <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping"></span>
         <a

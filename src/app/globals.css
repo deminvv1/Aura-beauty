@@ -15,6 +15,19 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+
+}
+
+@media (min-width: 768px) {
+  a, 
+  button, 
+  input,
+  div, 
+  textarea, 
+  select,
+  [role="button"] {
+    cursor: none !important;
+  }
 }
 
 .glass-nav {
@@ -80,3 +93,40 @@ html {
   transform: translateY(0);
 }
 
+
+@keyframes cookie-journey {
+  0% {
+    top: -80px; /* За пределами экрана сверху */
+    left: -80px; /* За пределами экрана слева */
+    transform: rotate(0deg);
+  }
+  30% {
+    top: 30vh;
+    left: 20vw;
+    transform: rotate(20deg);
+  }
+  60% {
+    top: 50vh;
+    left: 80vw; /* Улетает вправо */
+    transform: rotate(-15deg);
+  }
+  100% {
+    top: 80vh;
+    left: 10vw; /* Возвращается влево вниз */
+    transform: rotate(10deg);
+  }
+}
+
+.animate-cookie-journey {
+  /* Медленный, плавный пролет за 10 секунд */
+  animation: cookie-journey 7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Мягкое парение самой иконки внутри контейнера */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite ease-in-out;
+}
