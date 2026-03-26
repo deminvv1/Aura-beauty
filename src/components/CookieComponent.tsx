@@ -2,12 +2,58 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cookie } from "lucide-react";
-
 
 interface CookieProps {
   onOpenPrivacy: () => void;
 }
+
+const RealisticCookie = () => (
+  <svg
+    width="72"
+    height="72"
+    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <radialGradient id="cookieBg" cx="42%" cy="38%" r="58%">
+        <stop offset="0%" stopColor="#E8A855" />
+        <stop offset="55%" stopColor="#C97B2A" />
+        <stop offset="100%" stopColor="#9A5318" />
+      </radialGradient>
+      <radialGradient id="choc" cx="40%" cy="35%" r="60%">
+        <stop offset="0%" stopColor="#5C3A1E" />
+        <stop offset="100%" stopColor="#3B2010" />
+      </radialGradient>
+    </defs>
+
+    {/* Cookie base */}
+    <circle cx="50" cy="50" r="46" fill="#8B4510" opacity="0.3" />
+    <circle cx="50" cy="48" r="46" fill="url(#cookieBg)" />
+
+    {/* Surface texture lines */}
+    <path d="M24 36 Q38 32 52 38 Q66 44 78 40" fill="none" stroke="#A0621A" strokeWidth="1.2" opacity="0.35" />
+    <path d="M18 50 Q34 45 50 51 Q66 57 82 52" fill="none" stroke="#A0621A" strokeWidth="1.2" opacity="0.35" />
+    <path d="M22 64 Q38 59 54 65 Q68 70 80 66" fill="none" stroke="#A0621A" strokeWidth="1.2" opacity="0.3" />
+
+    {/* Chocolate chips */}
+    <rect x="34" y="28" width="14" height="9" rx="2.5" fill="url(#choc)" transform="rotate(-18 41 32)" />
+    <rect x="55" y="24" width="12" height="8" rx="2.5" fill="url(#choc)" transform="rotate(12 61 28)" />
+    <rect x="60" y="50" width="13" height="8" rx="2.5" fill="url(#choc)" transform="rotate(-8 66 54)" />
+    <rect x="28" y="54" width="11" height="7" rx="2.5" fill="url(#choc)" transform="rotate(20 33 57)" />
+    <rect x="44" y="64" width="13" height="8" rx="2.5" fill="url(#choc)" transform="rotate(-12 50 68)" />
+    <rect x="22" y="38" width="10" height="6" rx="2" fill="url(#choc)" transform="rotate(10 27 41)" />
+    <rect x="67" y="36" width="9" height="6" rx="2" fill="url(#choc)" transform="rotate(-5 71 39)" />
+
+    {/* Crumbs */}
+    <circle cx="48" cy="18" r="2.5" fill="#C97B2A" opacity="0.6" />
+    <circle cx="76" cy="30" r="2" fill="#C97B2A" opacity="0.55" />
+    <circle cx="80" cy="62" r="2" fill="#C97B2A" opacity="0.5" />
+    <circle cx="20" cy="62" r="2.5" fill="#C97B2A" opacity="0.55" />
+
+    {/* Highlight sheen */}
+    <ellipse cx="36" cy="30" rx="16" ry="9" fill="white" opacity="0.06" transform="rotate(-25 36 30)" />
+  </svg>
+);
 
 const CookieComponent = ({ onOpenPrivacy }: CookieProps) => {
   const [stage, setStage] = useState<"hidden" | "journey" | "expanded">(
@@ -59,16 +105,16 @@ const CookieComponent = ({ onOpenPrivacy }: CookieProps) => {
             transition: { duration: 1, ease: "circOut" },
           }}
           exit={{ opacity: 0, scale: 0.7, transition: { duration: 0.5 } }}
-          className={`fixed z-[100] shadow-2xl overflow-hidden cursor-default transition-all duration-300 ${
+          className={`fixed z-[100] cursor-default transition-all duration-300 ${
             stage === "journey"
-              ? "animate-cookie-journey w-16 h-16 rounded-full bg-primary flex items-center justify-center"
-              : "bottom-6 left-6 right-6 md:right-auto md:left-10 md:max-w-[420px] rounded-[32px] bg-black/80 backdrop-blur-3xl border border-white/10 p-10"
+              ? "animate-cookie-journey flex items-center justify-center"
+              : "bottom-6 left-6 right-6 md:right-auto md:left-10 md:max-w-[420px] rounded-[32px] bg-black/80 backdrop-blur-3xl border border-white/10 p-10 shadow-2xl overflow-hidden"
           }`}
           onAnimationEnd={handleJourneyEnd}
         >
           {stage === "journey" ? (
-            <motion.div layout="position">
-              <Cookie className="text-white animate-bounce-slow" size={32} />
+            <motion.div layout="position" className="animate-bounce-slow">
+              <RealisticCookie />
             </motion.div>
           ) : (
             <motion.div
